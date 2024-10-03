@@ -7,7 +7,27 @@
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    ???
+    let front_blank = 0;
+    let font_blank = 0;
+    for s in input{
+        if(s == " "){
+            front_blank += 1;
+        }
+        else if(s != " ") {
+            break;
+        }
+    }
+    i = input.len() - 1;
+    while(i > 0){
+        if(input[i] == " "){
+            font_blank += 1;
+        }
+        else if(input[i] != " "){
+            break;
+        }
+        i -= 1;
+    }
+    return input[front_blank..font_blank];
 }
 
 fn compose_me(input: &str) -> String {
