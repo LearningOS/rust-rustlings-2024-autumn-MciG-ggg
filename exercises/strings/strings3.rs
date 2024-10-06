@@ -7,32 +7,13 @@
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    let front_blank = 0;
-    let font_blank = 0;
-    for s in input{
-        if(s == " "){
-            front_blank += 1;
-        }
-        else if(s != " ") {
-            break;
-        }
-    }
-    i = input.len() - 1;
-    while(i > 0){
-        if(input[i] == " "){
-            font_blank += 1;
-        }
-        else if(input[i] != " "){
-            break;
-        }
-        i -= 1;
-    }
-    input[front_blank..font_blank + 1]
+  
+    input.trim().to_string()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    (input.to_string() + " world!")
+    input.to_string() + " world!"
 }
 
 fn replace_me(input: &str) -> String {
