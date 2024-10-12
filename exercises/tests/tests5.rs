@@ -28,11 +28,10 @@
 ///
 /// The `address` must contain a mutable reference to a valid `u32` value.
 unsafe fn modify_by_address(address: usize) {
-    // TODO: Fill your safety notice of the code block below to match your
-    // code's behavior and the contract of this function. You may use the
-    // comment of the test below as your format reference.
+    // SAFETY: 我们假设传入的地址是有效的,并且指向一个可变的 u32 值。
+    // 我们将该地址转换为一个可变的 u32 指针,然后修改其值。
     unsafe {
-        todo!("Your code goes here")
+        *(address as *mut u32) = 0xAABBCCDD;
     }
 }
 
